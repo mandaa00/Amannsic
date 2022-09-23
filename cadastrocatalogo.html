@@ -23,8 +23,6 @@
         color: rgb(121, 1, 45);
         font-size: 27px;
         padding-top: 15px;
-        text-align: center;
-        word-spacing: 100px;
     }
     .centro{
         height: 25vh;
@@ -48,18 +46,193 @@
         margin-left: 0%;
     }
     .nome{
-
+        background-color: rgb(255, 235, 228);
+        text-align: left;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(255, 235, 228);
+        margin-left: 2%;
+        margin-right: 1%;
+        word-spacing: 10px;
+        width: 70%;
+        margin-top: 1%;
     }
-
+    #nome{
+        width: 78%;
+        background-color: rgb(255, 235, 228);
+        border-style:solid;
+        border-bottom-color: rgb(121, 1, 45);
+        border-left-color: rgb(255, 235, 228);   
+        border-right-color: rgb(255, 235, 228);
+        border-top-color: rgb(255, 235, 228);
+        height: 2%;
+        outline: none;
+        font-size: 22px;
+        color: rgb(121, 1, 45);
+    }
+    .referencia{
+        background-color: rgb(255, 235, 228);
+        text-align: left;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(255, 235, 228);
+        margin-left: 2%;
+        margin-right: 1%;
+        word-spacing: 10px;
+        width: 70%;
+        margin-top: 1%;
+    }
+    #referencia{
+        width: 84%;
+        background-color: rgb(255, 235, 228);
+        border-style:solid;
+        border-bottom-color: rgb(121, 1, 45);
+        border-left-color: rgb(255, 235, 228);   
+        border-right-color: rgb(255, 235, 228);
+        border-top-color: rgb(255, 235, 228);
+        height: 2%;
+        outline: none;
+        font-size: 22px;
+        color: rgb(121, 1, 45);
+    }
+    .tamanho{
+        background-color: rgb(255, 235, 228);
+        text-align: left;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(255, 235, 228);
+        margin-left: 2%;
+        margin-right: 1%;
+        word-spacing: 10px;
+        width: 70%;
+        margin-top: 1%;
+    }
+    #tamanho{
+        width: 86%;
+        background-color: rgb(255, 235, 228);
+        border-style:solid;
+        border-bottom-color: rgb(121, 1, 45);
+        border-left-color: rgb(255, 235, 228);   
+        border-right-color: rgb(255, 235, 228);
+        border-top-color: rgb(255, 235, 228);
+        height: 2%;
+        outline: none;
+        font-size: 22px;
+        color: rgb(121, 1, 45);
+    }
+    .tecido{
+        background-color: rgb(255, 235, 228);
+        text-align: left;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(255, 235, 228);
+        margin-left: 2%;
+        margin-right: 1%;
+        word-spacing: 10px;
+        width: 70%;
+        margin-top: 1%;
+    }
+    #tecido{
+        width: 89%;
+        background-color: rgb(255, 235, 228);
+        border-style:solid;
+        border-bottom-color: rgb(121, 1, 45);
+        border-left-color: rgb(255, 235, 228);   
+        border-right-color: rgb(255, 235, 228);
+        border-top-color: rgb(255, 235, 228);
+        height: 2%;
+        outline: none;
+        font-size: 22px;
+        color: rgb(121, 1, 45);
+    }
+    .descricao{
+        background-color: rgb(255, 235, 228);
+        text-align: left;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(255, 235, 228);
+        margin-left: 2%;
+        margin-right: 1%;
+        word-spacing: 10px;
+        width: 70%;
+        margin-top: 1%;
+    }
+    #descricao{
+        width: 84%;
+        background-color: rgb(255, 235, 228);
+        border-style:solid;
+        border-bottom-color: rgb(121, 1, 45);
+        border-left-color: rgb(255, 235, 228);   
+        border-right-color: rgb(255, 235, 228);
+        border-top-color: rgb(255, 235, 228);
+        height: 2%;
+        outline: none;
+        font-size: 22px;
+        color: rgb(121, 1, 45);
+    }
+    .preco{
+        background-color: rgb(255, 235, 228);
+        text-align: left;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(255, 235, 228);
+        margin-left: 2%;
+        margin-right: 1%;
+        word-spacing: 10px;
+        width: 70%;
+        margin-top: 1%;
+    }
+    #preco{
+        width: 90%;
+        background-color: rgb(255, 235, 228);
+        border-style:solid;
+        border-bottom-color: rgb(121, 1, 45);
+        border-left-color: rgb(255, 235, 228);   
+        border-right-color: rgb(255, 235, 228);
+        border-top-color: rgb(255, 235, 228);
+        height: 2%;
+        outline: none;
+        font-size: 22px;
+        color: rgb(121, 1, 45);
+    }
+    .foto{
+        background-color: chocolate;
+        width: 100px;
+        height: 100px;
+    }
     </style>
 </head>
 <body>
     <h1> Cadastro de Catálogo: </h1>
 <div class="centro">
     <div class="vinho">
-            <div class="nome">
-                Nome da peça:
-            </div>
+                <div class="nome">
+                    Nome da peça:
+                    <input type="text" id="nome">
+                </div>
+                <div class="referencia">
+                    Referência:
+                    <input type="text" id="referencia">    
+                </div>
+                <div class="tamanho">
+                    Tamanho:
+                    <input type="text" id="tamanho">    
+                </div>
+                <div class="tecido">
+                    Tecido:
+                    <input type="text" id="tecido">    
+                </div>
+                <div class="descricao">
+                    Descrisção:
+                    <input type="text" id="descricao">    
+                </div>
+                <div class="preco">
+                    Preço:
+                    <input type="text" id="preco">    
+                </div>
+                <div class="foto">
+                    <img src="add.png" width="100px">
+                </div>
     </div>
 </div>
 
