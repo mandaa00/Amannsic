@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo</title>
+    <title>Gastos</title>
     <style>
     body{
         background-color:rgb(255, 235, 228);
@@ -18,7 +18,7 @@
         border-radius: 16px;
         border-width: 10px;
         border-color: rgb(121, 1, 45);
-        height: 350px;
+        height: 375px;
         width: 89%;
         color: rgb(121, 1, 45);
         font-size: 27px;
@@ -54,11 +54,11 @@
         margin-left: 2%;
         margin-right: 1%;
         word-spacing: 10px;
-        width: 70%;
-        margin-top: 1%;
+        width: 95%;
+        margin-top: 2%;
     }
     #nome{
-        width: 78%;
+        width: 83%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
         border-bottom-color: rgb(121, 1, 45);
@@ -70,69 +70,7 @@
         font-size: 22px;
         color: rgb(121, 1, 45);
     }
-    .referencia{
-        background-color: rgb(255, 235, 228);
-        text-align: left;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: rgb(255, 235, 228);
-        margin-left: 2%;
-        margin-right: 1%;
-        word-spacing: 10px;
-        width: 70%;
-        margin-top: 1%;
-    }
-    #referencia{
-        width: 84%;
-        background-color: rgb(255, 235, 228);
-        border-style:solid;
-        border-bottom-color: rgb(121, 1, 45);
-        border-left-color: rgb(255, 235, 228);   
-        border-right-color: rgb(255, 235, 228);
-        border-top-color: rgb(255, 235, 228);
-        height: 2%;
-        outline: none;
-        font-size: 22px;
-        color: rgb(121, 1, 45);
-    }
-    .tamanho{
-        background-color: rgb(255, 235, 228);
-        text-align: left;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: rgb(255, 235, 228);
-        margin-left: 2%;
-        margin-right: 1%;
-        word-spacing: 10px;
-        width: 70%;
-        margin-top: 1%;
-    }
-    #tamanho{
-        width: 86%;
-        background-color: rgb(255, 235, 228);
-        border-style:solid;
-        border-bottom-color: rgb(121, 1, 45);
-        border-left-color: rgb(255, 235, 228);   
-        border-right-color: rgb(255, 235, 228);
-        border-top-color: rgb(255, 235, 228);
-        height: 2%;
-        outline: none;
-        font-size: 22px;
-        color: rgb(121, 1, 45);
-    }
-    .tecido{
-        background-color: rgb(255, 235, 228);
-        text-align: left;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: rgb(255, 235, 228);
-        margin-left: 2%;
-        margin-right: 1%;
-        word-spacing: 10px;
-        width: 70%;
-        margin-top: 1%;
-    }
-    #tecido{
+    #categoria{
         width: 89%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
@@ -145,20 +83,8 @@
         font-size: 22px;
         color: rgb(121, 1, 45);
     }
-    .descricao{
-        background-color: rgb(255, 235, 228);
-        text-align: left;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: rgb(255, 235, 228);
-        margin-left: 2%;
-        margin-right: 1%;
-        word-spacing: 10px;
-        width: 70%;
-        margin-top: 1%;
-    }
-    #descricao{
-        width: 84%;
+    #cliente{
+        width: 91%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
         border-bottom-color: rgb(121, 1, 45);
@@ -170,20 +96,21 @@
         font-size: 22px;
         color: rgb(121, 1, 45);
     }
-    .preco{
+    #local{
+        width: 92%;
         background-color: rgb(255, 235, 228);
-        text-align: left;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: rgb(255, 235, 228);
-        margin-left: 2%;
-        margin-right: 1%;
-        word-spacing: 10px;
-        width: 70%;
-        margin-top: 1%;
+        border-style:solid;
+        border-bottom-color: rgb(121, 1, 45);
+        border-left-color: rgb(255, 235, 228);   
+        border-right-color: rgb(255, 235, 228);
+        border-top-color: rgb(255, 235, 228);
+        height: 2%;
+        outline: none;
+        font-size: 22px;
+        color: rgb(121, 1, 45);
     }
     #preco{
-        width: 90%;
+        width: 92%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
         border-bottom-color: rgb(121, 1, 45);
@@ -194,44 +121,32 @@
         outline: none;
         font-size: 22px;
         color: rgb(121, 1, 45);
-    }
-    .foto{
-        background-color: chocolate;
-        width: 100px;
-        height: 100px;
     }
     </style>
 </head>
 <body>
-    <h1> Cadastro de Catálogo: </h1>
+    <h1> Cadastro de Gastos: </h1>
 <div class="centro">
     <div class="vinho">
                 <div class="nome">
-                    Nome da peça:
+                    Nome do gasto:
                     <input type="text" id="nome">
                 </div>
-                <div class="referencia">
-                    Referência:
-                    <input type="text" id="referencia">    
+                <div class="nome">
+                    Categoria:
+                    <input type="text" id="categoria">    
                 </div>
-                <div class="tamanho">
-                    Tamanho:
-                    <input type="text" id="tamanho">    
+                <div class="nome">
+                    Cliente:
+                    <input type="text" id="cliente">    
                 </div>
-                <div class="tecido">
-                    Tecido:
-                    <input type="text" id="tecido">    
+                <div class="nome">
+                    Local:
+                    <input type="text" id="local">    
                 </div>
-                <div class="descricao">
-                    Descrisção:
-                    <input type="text" id="descricao">    
-                </div>
-                <div class="preco">
+                <div class="nome">
                     Preço:
                     <input type="text" id="preco">    
-                </div>
-                <div class="foto">
-                    <img src="add.png" width="100px">
                 </div>
     </div>
 </div>
