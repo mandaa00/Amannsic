@@ -122,6 +122,21 @@
         font-size: 22px;
         color: rgb(121, 1, 45);
     }
+    #botao{
+        background-color: rgb(121, 1, 45);
+        color: rgb(255, 235, 228);
+        border-radius: 20px;
+        border-color: rgb(121, 1, 45);
+        margin-top: 20%;
+        height: 40px;
+        width: 15%;
+        font-size: 20px;
+            }
+    .botoes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
     </style>
 </head>
 <body>
@@ -150,9 +165,11 @@
                 </div>
     </div>
 </div>
-
-
-
+<div class="botoes">
+    <input type="button" value="Cadastrar" id="botao">
+    <input type="button" value="Excluir" id="botao">
+    <input type="button" value="Atualizar" id="botao">
+</div>
 
 <div class="rodape">
     <div class="menu">
