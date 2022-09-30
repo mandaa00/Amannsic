@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Gastos</title>
+    <title>Lançamento de Pedidos</title>
     <style>
     body{
         background-color:rgb(255, 235, 228);
@@ -55,61 +55,9 @@
         margin-right: 1%;
         word-spacing: 10px;
         width: 96%;
-        margin-top: 2%;
+        margin-top: 5px;
     }
-    #nome{
-        width: 98%;
-        background-color: rgb(255, 235, 228);
-        border-style:solid;
-        border-bottom-color: rgb(121, 1, 45);
-        border-left-color: rgb(255, 235, 228);   
-        border-right-color: rgb(255, 235, 228);
-        border-top-color: rgb(255, 235, 228);
-        height: 2%;
-        outline: none;
-        font-size: 22px;
-        color: rgb(121, 1, 45);
-    }
-    #categoria{
-        width: 98%;
-        background-color: rgb(255, 235, 228);
-        border-style:solid;
-        border-bottom-color: rgb(121, 1, 45);
-        border-left-color: rgb(255, 235, 228);   
-        border-right-color: rgb(255, 235, 228);
-        border-top-color: rgb(255, 235, 228);
-        height: 2%;
-        outline: none;
-        font-size: 22px;
-        color: rgb(121, 1, 45);
-    }
-    #cliente{
-        width: 98%;
-        background-color: rgb(255, 235, 228);
-        border-style:solid;
-        border-bottom-color: rgb(121, 1, 45);
-        border-left-color: rgb(255, 235, 228);   
-        border-right-color: rgb(255, 235, 228);
-        border-top-color: rgb(255, 235, 228);
-        height: 2%;
-        outline: none;
-        font-size: 22px;
-        color: rgb(121, 1, 45);
-    }
-    #local{
-        width: 98%;
-        background-color: rgb(255, 235, 228);
-        border-style:solid;
-        border-bottom-color: rgb(121, 1, 45);
-        border-left-color: rgb(255, 235, 228);   
-        border-right-color: rgb(255, 235, 228);
-        border-top-color: rgb(255, 235, 228);
-        height: 2%;
-        outline: none;
-        font-size: 22px;
-        color: rgb(121, 1, 45);
-    }
-    #preco{
+    #caixas{
         width: 98%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
@@ -140,34 +88,41 @@
     </style>
 </head>
 <body>
-    <h1> Cadastro de Gastos: </h1>
+    <h1> Lançamento de Pedidos: </h1>
 <div class="centro">
     <div class="vinho">
                 <div class="nome">
-                    Nome do gasto:
-                    <input type="text" id="nome">
+                    Peça:
+                    <input type="text" id="caixas">
                 </div>
                 <div class="nome">
-                    Categoria:
-                    <input type="text" id="categoria">    
+                    Quantidade:
+                    <input type="text" id="caixas">    
+                </div>
+                <div class="nome">
+                    <br><br><br>
                 </div>
                 <div class="nome">
                     Cliente:
-                    <input type="text" id="cliente">    
+                    <input type="text" id="caixas">    
                 </div>
                 <div class="nome">
-                    Local:
-                    <input type="text" id="local">    
+                    Desconto:
+                    <input type="text" id="caixas">    
                 </div>
                 <div class="nome">
-                    Preço:
-                    <input type="text" id="preco">    
+                    Descrição:
+                    <input type="text" id="caixas">    
+                </div>
+                <div class="nome">
+                    Preço final:
+                    <input type="text" id="caixas">    
                 </div>
     </div>
 </div>
 
 <div class="botoes">
-    <input type="button" value="Cadastrar" id="botao">
+    <input type="button" value="Lançar" id="botao">
     <input type="button" value="Excluir" id="botao">
     <input type="button" value="Atualizar" id="botao">
     </div>
