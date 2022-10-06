@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Catálogo</title>
+    <title>Cadastro de Gastos</title>
     <style>
     body{
         background-color:rgb(255, 235, 228);
@@ -13,24 +13,17 @@
         font-size: 40px;
     }
     .vinho{
-        display: flex;
-        justify-content: flex-start;
         background-color: rgb(222, 182, 168 );
         border-style: solid;
         border-radius: 16px;
         border-width: 10px;
         border-color: rgb(121, 1, 45);
-        height: 230%;
+        height: 225%;
         width: 89%;
         color: rgb(121, 1, 45);
         font-size: 27px;
-        padding: 20px;
+        padding-top: 15px;
     }
-    /*
-    .vinho div{
-        width: 100%;
-    }
-    */
     .centro{
         height: 25vh;
         width: 100%;
@@ -40,32 +33,30 @@
     
     }
     .rodape{
-        background-color: rgb(121, 1, 45);
-        width: 100%;
-        height: 70px;
-        position:fixed;
-        bottom: 0px;
-        left: 0px;
-        display: flex;
-        justify-content: space-evenly;
+    background-color: rgb(121, 1, 45);
+    width: 100%;
+    height: 70px;
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-evenly;
     }
     .menu{
         margin-left: 0%;
     }
-
-    .vinho_item{
-        display: flex;
-        flex-direction: column;
+    .nome{
         background-color: rgb(255, 235, 228);
         text-align: left;
         border-radius: 10px;
         border-style: solid;
         border-color: rgb(255, 235, 228);
         margin-left: 2%;
-        margin-top: 6%;
-        width: 510%;
+        margin-right: 1%;
+        word-spacing: 10px;
+        width: 96%;
+        margin-top: 1%;
     }
-
     #nome{
         width: 98%;
         background-color: rgb(255, 235, 228);
@@ -76,11 +67,10 @@
         border-top-color: rgb(255, 235, 228);
         height: 2%;
         outline: none;
-        font-size: 16px;
+        font-size: 22px;
         color: rgb(121, 1, 45);
     }
-
-    #referencia{
+    #categoria{
         width: 98%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
@@ -90,10 +80,10 @@
         border-top-color: rgb(255, 235, 228);
         height: 2%;
         outline: none;
-        font-size: 16px;
+        font-size: 22px;
         color: rgb(121, 1, 45);
     }
-    #tamanho{
+    #cliente{
         width: 98%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
@@ -103,10 +93,10 @@
         border-top-color: rgb(255, 235, 228);
         height: 2%;
         outline: none;
-        font-size: 16px;
+        font-size: 22px;
         color: rgb(121, 1, 45);
     }
-    #tecido{
+    #local{
         width: 98%;
         background-color: rgb(255, 235, 228);
         border-style:solid;
@@ -116,20 +106,7 @@
         border-top-color: rgb(255, 235, 228);
         height: 2%;
         outline: none;
-        font-size: 16px;
-        color: rgb(121, 1, 45);
-    }
-    #descricao{
-        width: 98%;
-        background-color: rgb(255, 235, 228);
-        border-style:solid;
-        border-bottom-color: rgb(121, 1, 45);
-        border-left-color: rgb(255, 235, 228);   
-        border-right-color: rgb(255, 235, 228);
-        border-top-color: rgb(255, 235, 228);
-        height: 2%;
-        outline: none;
-        font-size: 16px;
+        font-size: 22px;
         color: rgb(121, 1, 45);
     }
     #preco{
@@ -142,27 +119,14 @@
         border-top-color: rgb(255, 235, 228);
         height: 2%;
         outline: none;
-        font-size: 16px;
+        font-size: 22px;
         color: rgb(121, 1, 45);
-    }
-    .foto{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 93%;
-        width: 120%;
-        background-color: rgb(255, 235, 228);
-        border-style: solid;
-        border-radius: 10px;
-        border-color: rgb(255, 235, 228);
-        margin-top: 5%;
-        margin-left: 345%;
     }
     .botoes{
         display: flex;
         flex-direction: row;
         justify-content:space-evenly;
-        margin-top: 22%;
+        margin-top: 21%;
     }
     #botao{
         background-color: rgb(121, 1, 45);
@@ -176,49 +140,38 @@
     </style>
 </head>
 <body>
-    <h1> Cadastro de Catálogo: </h1>
+    <h1> Cadastro de Gastos: </h1>
 <div class="centro">
     <div class="vinho">
-        <div>
-            <div class="vinho_item">
-                Nome da peça:
-                <input type="text" id="nome">
-            </div>
-            <div class="vinho_item">
-                Referência:
-                <input type="text" id="referencia">    
-            </div>
-            <div class="vinho_item">
-                Tamanho:
-                <input type="text" id="tamanho">    
-            </div>
-            <div class="vinho_item">
-                Tecido:
-                <input type="text" id="tecido">    
-            </div>
-            <div class="vinho_item">
-                Descrisção:
-                <input type="text" id="descricao">    
-            </div>
-            <div class="vinho_item">
-                Preço:
-                <input type="text" id="preco">    
-            </div>
-        </div>
-        <div class="direita">
-            <div class="foto">
-                    <img src="add.png" width="250px">
-            </div>
-        </div>
-                
+                <div class="nome">
+                    Nome do gasto:
+                    <input type="text" id="nome">
+                </div>
+                <div class="nome">
+                    Categoria:
+                    <input type="text" id="categoria">    
+                </div>
+                <div class="nome">
+                    Cliente:
+                    <input type="text" id="cliente">    
+                </div>
+                <div class="nome">
+                    Local:
+                    <input type="text" id="local">    
+                </div>
+                <div class="nome">
+                    Preço:
+                    <input type="text" id="preco">    
+                </div>
     </div>
 </div>
 
 <div class="botoes">
-<input type="button" value="Cadastrar" id="botao">
-<input type="button" value="Excluir" id="botao">
-<input type="button" value="Atualizar" id="botao">
+    <input type="button" value="Cadastrar" id="botao">
+    <input type="button" value="Excluir" id="botao">
+    <input type="button" value="Atualizar" id="botao">
 </div>
+    </div>
 
 <div class="rodape">
     <div class="menu">
