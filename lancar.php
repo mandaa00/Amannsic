@@ -16,5 +16,5 @@ $res = $pdo -> prepare("INSERT INTO cadastro(nome, telefone, email, senha) VALUE
     echo($codigo);
 ?>
     <script>
-       window.open("catalogo.html","_self");
+       window.open("pedidos.html","_self");
     </script>
