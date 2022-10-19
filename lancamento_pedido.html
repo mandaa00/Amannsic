@@ -91,43 +91,39 @@
 <body>
     <h1> Lançamento de Pedidos: </h1>
 <div class="centro">
-    <div class="vinho">
-                <div class="nome">
-                    Peça:
-                    <input type="text" id="caixas">
-                </div>
-                <div class="nome">
-                    Quantidade:
-                    <input type="text" id="caixas">    
-                </div>
-                <div class="nome">
-                    <br><br><br>
-                </div>
-                <div class="nome">
-                    Cliente:
-                    <input type="text" id="caixas">    
-                </div>
-                <div class="nome">
-                    Desconto:
-                    <input type="text" id="caixas">    
-                </div>
-                <div class="nome">
-                    Descrição:
-                    <input type="text" id="caixas">    
-                </div>
-                <div class="nome">
-                    Preço final:
-                    <input type="text" id="caixas">    
-                </div>
-    </div>
+    <form action="lancar.php" method="POST" id="formulario">
+        <div class="vinho">
+                    <div class="nome">
+                        Peça:
+                        <select id="peca" name="peca">
+                            <option> </option>
+                        </select>
+                    </div>
+                    <div class="nome">
+                        Quantidade:
+                        <input type="text" id="quantidade" name="quantidade">    
+                    </div>
+                    <div class="nome">
+                        <br><br><br>
+                    </div>
+                    <div class="nome">
+                        Cliente:
+                        <input type="text" id="cliente" name="cliente">    
+                    </div>
+                    <div class="nome">
+                        Preço final:
+                        <input type="text" id="preco_final" name="preco_final">    
+                    </div>
+        </div>
+    </form>
 </div>
-
+ 
 <div class="botoes">
-    <input type="button" value="Lançar" id="botao">
+    <input type="button" value="Lancar" id="botao" onclick="lancar();">
     <input type="button" value="Excluir" id="botao">
     <input type="button" value="Atualizar" id="botao">
     </div>
-
+ 
 <div class="rodape">
     <div class="menu">
     </div>
@@ -137,6 +133,16 @@
     <img src="lista.png">
     <img src="relogio.png">
     </div>
-
+ 
 </body>
+ 
+<script>
+    function lancar()
+    {
+        formulario.submit();
+    }
+ 
+</script>
+ 
+ 
 </html>
