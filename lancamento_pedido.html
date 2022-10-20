@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lançamento de Pedidos</title>
+    <script src="funcao.js"></script>
     <style>
     body{
         background-color:rgb(255, 235, 228);
@@ -91,14 +92,13 @@
 <body>
     <h1> Lançamento de Pedidos: </h1>
 <div class="centro">
-    <form action="lancar.php" method="POST" id="formulario">
+    <form  method="POST" id="formulario">
         <div class="vinho">
                     <div class="nome">
                         Peça:
-                        <select id="peca" name="peca">
+                        <select id="id_peca" name="peca">
                             <option value="Camisas"> Camisas</option>
                             <option value="Calcas">Calças</option>
-                            <option value=""> Calças </option>
                             <option value="Bermudas"> Bermudas</option>
                             <option value="Saias"> Saias </option>
                             <option value="Shorts"> Shorts </option>
@@ -113,6 +113,8 @@
                         Cliente:
                         <input type="text" id="cliente" name="cliente">    
                     </div>
+                    <button onclick="peca()"> Calcular Preço Final </button>
+
                     <div class="nome">
                         Preço final:
                         <input type="text" id="preco_final" name="preco_final">    
