@@ -1,16 +1,29 @@
-var P = 0
-
-function Peca()
+    function calcular()
     {
-        P=0
-        if (Peca.value=="--")
+        if(peca.value=="Camisas")
         {
-            P=0
+            preco_final.value= 21*quantidade.value;
         }
-        if (Peca.value=="Camisas")
+        if(peca.value=="Calças")
         {
-            P=34
+            preco_final.value= 35*quantidade.value;
         }
-        if ()
+        if(peca.value=="Bermudas")
+        {
+            preco_final.value= 30*quantidade.value;
+        }
+        if(peca.value=="Saias")
+        {
+            preco_final.value= 27*quantidade.value;
+        }
+        if(peca.value=="Shorts")
+        {
+            preco_final.value= 24*quantidade.value;
+        }
+        if(peca.value=="Regatas")
+        {
+            preco_final.value= 19*quantidade.value;
+        }
+
     }
 

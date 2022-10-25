@@ -4,17 +4,19 @@ $peca=$_POST["peca"];
 $quantidade=$_POST["quantidade"];
 $cliente=$_POST["cliente"];
 $preco_final=$_POST["preco_final"];
+$tamanho=$_POST["tamanho"];
+
+$res = $pdo -> prepare("INSERT INTO pedidos(quantidade, codigo_peca, tamanho, cliente, preco_total) VALUES (:quantidade, :codigo_peca, :tamanho, :cliente, :preco_total) ");
  
-$res = $pdo -> prepare("INSERT INTO cadastro(nome, telefone, email, senha) VALUES (:nome,:telefone,:email,:senha) ");
- 
-    $res->bindValue(":nome",$nome);
-    $res->bindValue(":telefone",$telefone);
-    $res->bindValue(":email",$email);
-    $res->bindValue(":senha",$senha);
+    $res->bindValue(":quantidade",$quantidade);
+    $res->bindValue(":codigo_peca",$peca);
+    $res->bindValue(":tamanho",$tamanho);
+    $res->bindValue(":cliente",$cliente);
+    $res->bindValue(":preco_total",$preco_final);
    
     $res->execute();
     echo($codigo);
 ?>
     <script>
-       window.open("pedidos.html","_self");
+       window.open("lancamento_pedido.php?email=<?php echo($cliente); ?>","_self");
     </script>

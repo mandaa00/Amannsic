@@ -6,6 +6,12 @@
     <style>
     body{
         background-color:rgb(255, 235, 228);
+        width: 100%;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
     }
     h1{
         color: rgb(121, 1, 45);
@@ -18,20 +24,22 @@
         border-radius: 16px;
         border-width: 10px;
         border-color: rgb(121, 1, 45);
-        height: 175%;
-        width: 300%;
+        width: 100%;
         color: rgb(121, 1, 45);
         font-size: 27px;
         padding-top: 10px;
-        margin-left: -90%;
+        height: 300px;
     }
     .centro{
-        height: 25vh;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-    
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        height: 400px;
+        background-color: yellow;
     }
     .rodape{
         background-color: rgb(121, 1, 45);
@@ -46,10 +54,6 @@
         justify-content: space-around;
         align-items: center;
     }
-    .menu{
-        margin-left: -25%;
-    }
-
     .nome{
         background-color: rgb(255, 235, 228);
         text-align: left;
@@ -80,16 +84,24 @@
         display: flex;
         flex-direction: row;
         justify-content:space-evenly;
-        margin-top: 23%;
+        position: absolute;
+        margin-bottom: 50px;
+        bottom: 50px;
     }
     #botao{
         background-color: rgb(121, 1, 45);
         border-radius: 15px;
         color: rgb(255, 235, 228);
-        width: 15%;
+        width: 250px;
         height: 35px;
         border-color: rgb(121, 1, 45);
         font-size: 20px;
+        margin-left: 60px;
+    }
+    .tabela{
+        height: 500px;
+        width: 100%;
+        background-color: gray;
     }
     </style>
 </head>
@@ -103,13 +115,22 @@
                         <select id="peca" name="peca">
                             <option value="Camisas"> Camisas</option>
                             <option value="Calcas">Calças</option>
-                            <option value=""> Calças </option>
                             <option value="Bermudas"> Bermudas</option>
                             <option value="Saias"> Saias </option>
                             <option value="Shorts"> Shorts </option>
                             <option value="Regatas"> Regatas</option>
                         </select>
                     </div>
+                    <div class="nome">
+                        Tamanho:
+                        <select id="tamanho" name="tamanho">
+                                <option value="P"> P</option>
+                                <option value="M"> M </option>
+                                <option value="G"> G </option>
+                                <option value="GG"> GG </option>
+                        </select>    
+                    </div>      
+
                     <div class="nome">
                         Quantidade:
                         <input type="number" id="quantidade" name="quantidade">    
@@ -120,21 +141,56 @@
                     </div>
                     <div class="nome">
                         Preço final:
-                        <input type="text" id="preco_final" name="preco_final">    
+                        <input type="text" id="preco_final" name="preco_final" onclick="calcular();">    
                     </div>
         </div>
     </form>
+    <div class="tabela">
+        <table align="center" border="1">
+            <tr>
+                <td>
+                    Peça
+                </td>
+                <td>
+                        Tamanho
+                </td>
+                <td>
+                        Quantidade
+                </td>
+                <td>
+                        Preço
+                </td>
+            </tr>
+    <?php
+
+   $cliente = $_GET["email"];
+     include ("config.php");
+     $res = $pdo -> prepare("SELECT * FROM PEDIDOS WHERE cliente='$cliente'");
+     $res->execute();
+     //foreach....
+    // {
+        $nome = $linha["codigo_peca"];
+        $tamanho = $linha["tamanho"];
+        $quantidade = $linha["quantidade"];
+        $preco = $linha["preco"];
+        echo("<tr><td>$nome</td><td>$tamanho</td><td>$quantidade</td><td>$preco</td></tr>");
+    // }
+
+
+
+    ?>
+        </table>
+        </div>        
 </div>
- 
+
 <div class="botoes">
-    <input type="button" value="Lancar" id="botao" onclick="lancar();">
+    <input type="button" value="Adicionar ao carrinho" id="botao" onclick="lancar();">
     <input type="button" value="Excluir" id="botao">
     <input type="button" value="Atualizar" id="botao">
+    <input type="button" value="Finalizar pedido" id="botao">
     </div>
  
 <div class="rodape">
-    <div class="menu">
-    </div>
     <a href="catalogo.html"><img src="camisaa.png" width="70px" height="60px"></a>
     <a href="pedido.html"><img src="lista.png" width="65px" height="60px"></a>
     <a href="perfil.html"><img src="perfill.png" width="60px" height="60px"></a>
@@ -147,8 +203,36 @@
     {
         formulario.submit();
     }
- 
+    function calcular()
+    {
+        if(peca.value=="Camisas")
+        {
+            preco_final.value= 21*quantidade.value;
+        }
+        if(peca.value=="Calças")
+        {
+            preco_final.value= 35*quantidade.value;
+        }
+        if(peca.value=="Bermudas")
+        {
+            preco_final.value= 30*quantidade.value;
+        }
+        if(peca.value=="Saias")
+        {
+            preco_final.value= 27*quantidade.value;
+        }
+        if(peca.value=="Shorts")
+        {
+            preco_final.value= 24*quantidade.value;
+        }
+        if(peca.value=="Regatas")
+        {
+            preco_final.value= 19*quantidade.value;
+        }
+    }
 </script>
+
+
  
  
 </html>
