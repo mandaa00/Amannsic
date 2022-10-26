@@ -44,22 +44,23 @@
             justify-content: center;
  
         }
- 
-        .rodape {
-            background-color: rgb(121, 1, 45);
-            width: 100%;
-            height: 70px;
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
-            display: flex;
-            justify-content: space-evenly;
+        .rodape{
+        background-color: rgb(121, 1, 45);
+        width: 100%;
+        height: 80px;
+        position:fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
         }
- 
-        .menu {
-            margin-left: 0%;
-        }
- 
+        .menu{
+            margin-left: -25%;
+        }        
         .vinho_item {
             display: flex;
             flex-direction: column;
@@ -237,12 +238,10 @@
     <div class="rodape">
         <div class="menu">
         </div>
-        <img src="camisaa.png">
-        <img src="saco.png">
-        <img src="carteira.png">
-        <img src="lista.png">
-        <img src="relogio.png">
-    </div>
+        <a href="catalogo.html"><img src="camisaa.png" width="70px" height="60px"></a>
+        <a href="pedido.html"><img src="lista.png" width="65px" height="60px"></a>
+        <a href="perfil.html"><img src="perfill.png" width="60px" height="60px"></a>
+        </div>
  
 </body>
  
