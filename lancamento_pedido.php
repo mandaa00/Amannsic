@@ -200,7 +200,6 @@ if(isset($_GET["email"]))
         $tamanho = $linha["tamanho"];
         $quantidade = $linha["quantidade"];
         $preco = $linha["preco_total"];
-        $excluir=$_POST["excluir"];
         echo("<tr><td>$cliente</td><td>$nome</td><td>$tamanho</td><td>$quantidade</td><td>$preco</td><td>$excluir</td></tr>");
     }
 
