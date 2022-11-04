@@ -9,11 +9,11 @@
         margin-top: 0%;
         width: 100%;
         height: 100vh;
-        background-color: rgb(255, 235, 228);
-        color: rgb(255, 235, 228);
+        background-color:rgba(255, 235, 228, 1);
+        color: rgba(82, 62, 39, 1);
     }
     .vinho{
-        background-color: rgb(121, 1, 45);
+        background-color: rgba(232, 207, 193, 1);
         height: 100vh;
         width: 40%;
         margin-left: 0%;
@@ -31,37 +31,23 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color:rgb(121, 1, 45);
+        background-color:rgba(232, 207, 193, 1);
         height: 580px;
         width: 450px;
-        border-radius: 15px;
         font-size: 17px;
     }
 
     #escrita{
-        margin-left: 140px;
+        margin-left: 50px;
     }
 
     #escreva{
-        background-color: rgb(222, 182, 168);
-        border-radius: 10px;
+        background-color: rgba(255, 235, 228, 1);
         border-style: solid;
-        border-width: 10px;
-        border-color: rgb(255, 235, 228);
+        border-color: rgba(255, 235, 228, 1);
+        width: 350px;
+        height: 30px;
     }
-
-    #escrevaa{
-        background-color: rgb(121, 1, 45);
-        border-style: solid;
-        border-width: 10px;
-        border-color: rgb(255, 235, 228);
-        height: 50px;
-        width: 330px;
-        color: rgb(255, 235, 228);
-        border-radius: 10px;
-        font-weight: bold;
-    }
-
     .direita{
         display: flex;
         flex-direction: column;
@@ -73,11 +59,29 @@
     }
     
     h1{
-        color: rgb(121, 1, 45);
+        color: rgba(82, 62, 39, 1);
         font-size: 44px;
-        font-weight: inherit;
     }
-
+    .button{
+        width: 350px;
+        height: 30px;
+        background-color: rgba(82, 62, 39, 1);
+        border-style: solid;
+        border-color: rgba(82, 62, 39, 1);
+        color: rgba(255, 235, 228, 1); 
+    }
+    .irlog{
+        font-size: medium;
+    }
+    a{
+        color: rgba(82, 62, 39, 1);
+    }
+    .termos{
+        font-size:x-small;
+        text-align: center;
+        padding-top: 1%;
+        color: rgb(73, 60, 44);
+    }
     </style> 
 
 </head>
@@ -86,10 +90,10 @@
     <div class="vinho">
 
 
-        <img src="logo.png" width="320px" id="escrita" style="margin-bottom:15%">
+        <img src="logonova.png" width="500px" id="escrita" style="margin-bottom:5%">
     </div>
     <div class="direita">
-        <h1>Cadastro:</h1>
+        <h1>Cadastre-se:</h1>
 
         <form action="cadastrar.php" method="post">
         <div class="login">
@@ -109,11 +113,14 @@
                 <br><br>
                 <input type="email" id="escreva" name="email">
                 <br><br>
-                <div class="button"> <input type="submit" value="cadastrar"></div>
+                <div> <input type="submit" value="CADASTRAR" class="button"></div>
+                <br>
+                <div class="irlog"><a href="login.html">Já tenho uma conta</a></div>
             </form>
         
 
     </div>
+    <div class="termos"> Ao clicar no botão acima você estará concordando com os nossos <br> Termos de Uso e Política de Privacidade </div>
     </div>
     </div>
 

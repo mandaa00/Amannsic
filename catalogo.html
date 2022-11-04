@@ -1,26 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Catálogo</title>
     <style>
-    body{
-        background-color:rgb(255, 235, 228);
+    html{
+        scroll-behavior: smooth;
     }
-    h1{
-        color: rgb(121, 1, 45);
-        text-align: center;
-        font-size: 40px;
+    body{
+        background-color:rgba(255, 235, 228, 1);
     }
     .vinho{
-        background-color: rgb(222, 182, 168 );
-        border-style: solid;
-        border-radius: 16px;
-        border-width: 10px;
-        border-color: rgb(121, 1, 45);
-        height: 50px;
         width: 89%;
-        font-size: 27px;
+        font-size: 15px;
         padding-top: 15px;
         text-align: center;
         word-spacing: 100px;
@@ -31,7 +23,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-    
+        margin-top: 150px;
     }
     .fundinho{
         width: 90%;
@@ -44,44 +36,59 @@
         text-align: center;
     }
     .rodape{
-    background-color: rgb(121, 1, 45);
+    background-color: rgba(232, 207, 193, 1);
     width: 100%;
     height: 80px;
-    position:fixed;
-    bottom: 0px;
+    position:absolute;
+    bottom: auto;
     left: 0px;
     right: 0px;
+    top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     }
-    .menu{
-        margin-left: -25%;
-    }
-    .cadprod{
-        color: rgb(121, 1, 45);
-        font-size: 18px;
-        text-align: center;
-        text-decoration: underline;
-        margin-top: -5%;
+    .rodape a:hover{
+        color:rgba(82, 62, 39, 1);
     }
     a{
-        color: rgb(121, 1, 45);
-        font-weight: 100;
+        text-decoration: none;
+        color: rgb(34, 23, 10);
+        font-size:x-large;
+    }
+    hr{
+        height: 2px;
+        background-color:rgba(82, 62, 39, 1);
+        border-radius: 10px;
+        border-color: rgba(82, 62, 39, 1);
+        border-style: solid;
+        width: 90%;
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    .cadprod{
+        text-align: center;
     }
     </style>
 </head>
 <body>
-    <h1> Catálogo: </h1>
+    <div class="rodape">
+        <a href="catalogo.html">Catálogo</a>
+        <a href="pedido.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+    </div>
 <div class="centro">
-<div class="vinho">
-    <a href="#camisas">Calças</a>
-    <a href="#camisas">Bermudas</a>
-    <a href="#camisas">Saias</a>
-    <a href="#camisas">Shorts</a>
-    <a href="#camisas">Regatas</a>
-</div>
+    <div class="vinho">
+        <hr>
+        <a href="#camisas">Camisas</a>
+        <a href="#calcas">Calças</a>
+        <a href="#bermudas">Bermudas</a>
+        <a href="#saias">Saias</a>
+        <a href="#shorts">Shorts</a>
+        <a href="#regatas">Regatas</a>
+        <hr>
+    </div>
 </div>
 <a href="cadastrocatalogo.html"><div class="cadprod"> cadastrar novo produto </div> </a>
 <br><br>
@@ -104,13 +111,7 @@
 
 
 
-<div class="rodape">
-    <div class="menu">
-    </div>
-    <a href="catalogo.html"><img src="camisaa.png" width="70px" height="60px"></a>
-    <a href="pedido.html"><img src="lista.png" width="65px" height="60px"></a>
-    <a href="perfil.html"><img src="perfill.png" width="60px" height="60px"></a>
-    </div>
+
 
 </body>
 </html>
