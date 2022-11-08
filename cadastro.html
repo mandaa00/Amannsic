@@ -41,7 +41,7 @@
         margin-left: 80px;
     }
 
-    #escreva{
+    .escreva{
         background-color: rgba(255, 235, 228, 1);
         border-style: solid;
         border-color: rgba(255, 235, 228, 1);
@@ -81,6 +81,10 @@
         padding-top: 1%;
         color: rgb(73, 60, 44);
     }
+    #mensagem{
+        font-size: 11px;
+        color: red;
+    }
     </style> 
 
 </head>
@@ -98,21 +102,22 @@
         <div class="login">
                 Nome:
                 <br><br>
-                <input type="text" id="escreva" name="nome">
+                <input type="text" class="escreva" name="nome" id="nome" required>
                 <br>
                 Telefone:
                 <br><br>
-                <input type="number" id="escreva" name="telefone">
+                <input type="number" class="escreva" name="telefone" id="telefone" required>
                 <br>
                 Senha:
                 <br><br>
-                <input type="password" id="escreva" name="senha">
+                <input type="password" class="escreva" name="senha" id="senha" required>
+                <div id="mensagem"></div>
                 <br>
                 Email:
                 <br><br>
-                <input type="email" id="escreva" name="email">
+                <input type="email" class="escreva" name="email" id="email" required>
                 <br><br>
-                <div> <input type="submit" value="CADASTRAR" class="button"></div>
+                <div> <input type="submit" value="CADASTRAR" class="button" onmousemove="validar();"></div>
                 <br>
                 <div class="irlog"><a href="login.html">Já tenho uma conta</a></div>
             </form>
@@ -123,6 +128,18 @@
     </div>
     </div>
 
+    <script>
+        function validar(){
+            var s = senha.value;
+            if (s.length<6)
+            {
+                //alert("A senha deve ter no mínimo 6 caracteres");
+                senha.style.borderColor="red";
+                senha.style.boxShadow="2px 2px #E78181";
+                mensagem.innerHTML="A senha deve ter no mínimo 6 caracteres";
+            }
+        }
+    </script>
 
 
 </body>
