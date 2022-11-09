@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Catálogo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
     html{
         scroll-behavior: smooth;
@@ -25,7 +26,7 @@
         justify-content: center;
         margin-top: 150px;
     }
-    .fundinho{
+    /* .fundinho{
         width: 90%;
         height: 2800px;
         border-radius: 15px;
@@ -34,7 +35,7 @@
         font-size: 27px;
         color: rgb(121, 1, 45);
         text-align: center;
-    }
+    } */
     .rodape{
     background-color: rgba(232, 207, 193, 1);
     width: 100%;
@@ -92,26 +93,46 @@
 </div>
 <a href="cadastrocatalogo.html"><div class="cadprod"> cadastrar novo produto </div> </a>
 <br><br>
-<div class="fundinho">
-    <br><br>
-    <div id="camisas">Camisas</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="calcas">Calças</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="bermudas">Bermudas</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="saias">Saias</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="shorts">Shorts</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="regatas">Regatas</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
+<div class="fundinho ">
+    <div class="container p-5 " style="background-color: rgb(222, 182, 168 ); height: 2800px">
+        <?php  // listar produtos, um por um.
+                include("listacatalogo.php");
+                if (!empty($listaItens)) {
+                    foreach ($listaItens as $linha) { ?>
+            <div class="p-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 d-flex align-items-stretche">
+        
+          <a href="inserir_favoritos.php?id_produto=<?php echo $linha[
+              "id_produto"
+          ]; ?>" class="position-absolute right-0 p-2 text-danger">
+            
+          </a>
+        <?php
+              //}
+              ?>
+          <a style="text-decoration:none;" href="Produto.php?id_produto=<?php echo $linha[
+              "id_produto"
+          ]; ?>">
+          <?php echo '<div class=""><img height="100%" width="100%"  class="border border-white card-img-top" src="' .
+              $linha["imagem"] .
+              '"></div>'; ?>
+          
+          <div class="text-start card-header">
+          <h5 class="text-muted"><?php echo $linha["nome_produto"]; ?></h5>
+          
+          <h6 class="text-success"> FRETE GRATIS</h6>
+          </a> 
+          <h4 class="card-title"><?php echo "R$" .
+              $linha["preco"] .
+              ",00"; ?></h4>
+          </div>
+        </div> 
+                         
+      </div>
+
+        <?php }} ?>
 
 
-
-
-
-
+        
+    </div>
 </body>
 </html>

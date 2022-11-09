@@ -1,22 +1,25 @@
 <?php
 include ("config.php");
-$preco=$_POST["preco"];
-$nome=$_POST["nome"];
-$tecido=$_POST["tecido"];
-$descricao=$_POST["descricao"];
-$referencia=$_POST["referencia"];
+$nome = $_POST["nome"];
+$preco = $_POST["preco"];
+$tecido = $_POST["tecido"];
+$descricao = $_POST["descricao"];
+$imagem = $_FILES['imagem']; 
+$extensao = $imagem['type'];
+$conteudo = file_get_contents($imagem['tmp_name']);
+$base64 = "data:".$extensao.";base64,".base64_encode($conteudo);
  
-$comando = $pdo->prepare("INSERT INTO catalogo(preco,nome_peca,tecido,descricao,referencia) VALUES (:preco,:nome,:tecido,:descricao,:referencia)" );
+$comando = $pdo->prepare("INSERT INTO catalogo(preco,nome_peca,tecido,descricao,img) VALUES (:preco,:nome,:tecido,:descricao, :conteudo)");
  
     $comando->bindValue(":preco",$preco);
     $comando->bindValue(":nome",$nome);
     $comando->bindValue(":tecido",$tecido);
     $comando->bindValue(":descricao",$descricao);
-    $comando->bindValue(":referencia",$referencia);
+    $comando->bindValue(":conteudo", $base64);
    
     $comando->execute();
     
 ?>
     <script>
-       window.open("catalogo.html","_self");
+       window.open("cadastrocatalogo.html","_self");
     </script>
