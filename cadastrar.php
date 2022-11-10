@@ -14,7 +14,7 @@ $comando->bindValue(":senha",$senha);
 
 $comando->execute();
 
-header("Location:catalogo.php");
+header("Location:catalogo.html");
 
 unset($comando);
 unset($pdo);
