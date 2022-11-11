@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Nome do funcionário</title>
     <style>
@@ -34,23 +35,6 @@
         flex-direction: row;
         justify-content: center;
     
-    }
-    .rodape{
-    background-color: rgb(121, 1, 45);
-    width: 100%;
-    height: 80px;
-    position:fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    }
-    .menu{
-        margin-left: -25%;
     }
     .nome{
         background-color: rgb(255, 235, 228);
@@ -151,9 +135,27 @@
     </style>
 </head>
 <body>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgba(232, 207, 193, 1)">
+                <a class="navbar-brand ps-5" style="color:rgba(82, 62, 39, 1)">Amannsic Addiction</a>
+                    <div class="container">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link active ms-5" style="color:rgba(82, 62, 39, 1);" aria-current="page" href="catalogo.php">Catálogo</a>
+                          <a class="nav-link active ms-3" style="color:rgba(82, 62, 39, 1);" aria-current="page" href="pedido.html">Pedidos</a>
+                          <a class="nav-link active ms-3" style="color:rgba(82, 62, 39, 1);" aria-current="page" href="perfil.html">Prefil</a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+
+                  <br><br><br>
 <div class="fotinho">
     <h1><img src="perfil.png" width="130px" id="foto">  Nome do funcionário </h1>
 </div>
+<br><br>
     <div class="centro">
     <div class="vinho">
                 <div class="nome">
@@ -185,13 +187,5 @@
 </div>
     </div>
 
-    <div class="rodape">
-        <div class="menu">
-        </div>
-        <a href="catalogo.html"><img src="camisaa.png" width="70px" height="60px"></a>
-        <a href="pedido.html"><img src="lista.png" width="65px" height="60px"></a>
-        <a href="perfil.html"><img src="perfill.png" width="60px" height="60px"></a>
-            </div>    
 
-</body>
 </html>

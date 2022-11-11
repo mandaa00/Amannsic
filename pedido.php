@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Pedidos</title>
     <style>
@@ -69,23 +70,6 @@
         border-radius: 10px;
         padding: 20px;
     }
-    .rodape{
-    background-color: rgb(121, 1, 45);
-    width: 100%;
-    height: 80px;
-    position:fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    }
-    .menu{
-        margin-left: -25%;
-    }
     #select{
         height: 100%;
         text-align: center;
@@ -115,6 +99,21 @@
     </style>
 </head>
 <body>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgba(232, 207, 193, 1)">
+                <a class="navbar-brand ps-5 " style="color:rgba(82, 62, 39, 1);">Amannsic Addiction</a>
+                    <div class="container">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link active ms-5" style="color:rgba(82, 62, 39, 1);" aria-current="page" href="catalogo.php">Catálogo</a>
+                          <a class="nav-link active ms-3" style="color:rgba(82, 62, 39, 1);" aria-current="page" href="pedido.html">Pedidos</a>
+                          <a class="nav-link active ms-3" style="color:rgba(82, 62, 39, 1);" aria-current="page" href="perfil.html">Prefil</a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
     <h1> Pedidos: </h1>
 <div class="centro">
 <div class="vinho">
@@ -170,6 +169,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD:pedido.php
 <div class="rodape">
     <div class="menu">
     </div>
@@ -179,5 +179,7 @@
     </div>
 
 
+=======
+>>>>>>> 052fba555a02d0727e9a0daacb4a7d441e93706c:pedido.html
 </body>
 </html>
