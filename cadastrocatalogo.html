@@ -71,7 +71,7 @@
             border-color: rgb(255, 235, 228);
             margin-left: 2%;
             margin-top: 6%;
-            width: 510%;
+            width: 100%;
         }
  
         #nome {
@@ -169,7 +169,6 @@
             border-radius: 10px;
             border-color: rgb(255, 235, 228);
             margin-top: 5%;
-            margin-left: 345%;
         }
  
         .botoes {
@@ -195,17 +194,14 @@
     <h1> Cadastro de Catálogo: </h1>
     
     <div class="centro">
-        <form action="cadastrocatalogo.php" method="POST" id="formulario">
+        <form action="cadastrocatalogo.php" method="POST" id="formulario" enctype="multipart/form-data">
             <div class="vinho">
                 <div>
                     <div class="vinho_item">
                         Nome da peça:
                         <input type="text" id="nome" name="nome">
                     </div>
-                    <div class="vinho_item">
-                        Referência:
-                        <input type="text" id="referencia" name="referencia">
-                    </div>
+                    
                     <div class="vinho_item">
                         Tecido:
                         <input type="text" id="tecido" name="tecido">
@@ -216,16 +212,19 @@
                     </div>
                     <div class="vinho_item">
                         Preço:
-                        <input type="text" id="preco" name="preco">
+                        <input type="text" id="preco" name="preco" >
                     </div>
                 </div>
+                
+                
                 <div class="direita">
                     <div class="foto">
-                        <img src="add.png" width="250px">
+                        <img src="add.png" width="50px">
                     </div>
                 </div>
- 
+                
             </div>
+            <input type="file" name="imagem" style="background-color:pink; height: 50px; width: 210px; display:block;" multiple accept="image/*"> 
         </form>
     </div>
  
@@ -238,8 +237,8 @@
     <div class="rodape">
         <div class="menu">
         </div>
-        <a href="catalogo.html"><img src="camisaa.png" width="70px" height="60px"></a>
-        <a href="pedido.html"><img src="lista.png" width="65px" height="60px"></a>
+        <a href="catalogo.php"><img src="camisaa.png" width="70px" height="60px"></a>
+        <a href="pedido.php"><img src="lista.png" width="65px" height="60px"></a>
         <a href="perfil.html"><img src="perfill.png" width="60px" height="60px"></a>
         </div>
  
@@ -250,6 +249,7 @@
         formulario.submit();
     }
  
+
 </script>
  
 </html>

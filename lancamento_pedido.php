@@ -115,6 +115,15 @@
         text-align: center;
    
     }
+    #imagem
+    {
+        margin-top: -20px;
+        margin-left: 186px;
+    }
+    #meu_upload
+    {
+        display:none;
+    }
     </style>
 </head>
 <body>
@@ -133,6 +142,7 @@
                             <option value="Regatas"> Regatas</option>
                         </select>
                     </div>
+                   
                     <div class="nome">
                         Tamanho:
                         <select id="tamanho" name="tamanho">
@@ -158,6 +168,8 @@
                         <input type="text" id="preco_final" name="preco_final"  style="border:0;background-color: rgb(255, 235, 228);">    
                     </div>
                     <br>
+                    <img onclick="busca_imagem();" id="imagem" src="add.png" width="50px">
+                    <input type="file" id="meu_upload">
         </div>
     </form>
     <div class="tabela">
@@ -218,8 +230,8 @@ if(isset($_GET["email"]))
     </div>
  
 <div class="rodape">
-    <a href="catalogo.html"><img src="camisaa.png" width="50px" height="40px"></a>
-    <a href="pedido.html"><img src="lista.png" width="45px" height="40px"></a>
+    <a href="catalogo.php"><img src="camisaa.png" width="50px" height="40px"></a>
+    <a href="pedido.php"><img src="lista.png" width="45px" height="40px"></a>
     <a href="perfil.html"><img src="perfill.png" width="40px" height="40px"></a>
     </div>
  
@@ -259,6 +271,26 @@ if(isset($_GET["email"]))
             preco_final.value= 19*quantidade.value;
         }
     }
+function busca_imagem() {
+meu_upload.click();
+}
+$(document).on("change", "#meu_upload", function(e) {
+    showThumbnail(this.files);
+});
+
+function showThumbnail(files) {
+    if (files && files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            imagem.src = e.target.result;
+            caminho = e.target.result;
+        }
+
+        reader.readAsDataURL(files[0]);
+    }
+}
+
 </script>
 
  

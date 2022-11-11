@@ -148,14 +148,33 @@
 <br><br>
 <div class="fundinho">
     <div class="fundo">
+            <table class="table">
+                    <tbody>
+                        <?php
+                        include("listagem_pedidos.php");
+                        
+                        if (!empty($lista_produtos)) {
+                          
+                            foreach ($lista_produtos as $linha) {?>
+                                <tr class="tr">
+                                <td class="td"> <?php echo '<img height="90px" width="90px" src="' .$linha['img']. '">'; ?>  </td>
+                                <td class="td"> <?php echo $linha['codigo_peca']; ?>  </td>
+                                <td class="td"> <?php echo $linha['num_pedido']; ?>  </td>
+                                <td class="td"> <?php echo $linha['tamanho']; ?>  </td>
+                                <td class="td"> <?php echo $linha['preco_total']; ?>  </td>
+                                </tr>
+                            <?php }
+                        }
+                        ?>
+                    </tbody>
     </div>
 </div>
 
 <div class="rodape">
     <div class="menu">
     </div>
-    <a href="catalogo.html"><img src="camisaa.png" width="70px" height="60px"></a>
-    <a href="pedido.html"><img src="lista.png" width="65px" height="60px"></a>
+    <a href="catalogo.php"><img src="camisaa.png" width="70px" height="60px"></a>
+    <a href="pedido.php"><img src="lista.png" width="65px" height="60px"></a>
     <a href="perfil.html"><img src="perfill.png" width="60px" height="60px"></a>
     </div>
 
